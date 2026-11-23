@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nickname Atlas | Student Showcase</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-logo">STUDENT SHOWCASE</div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="element_checker.html">Element Archive</a>
+            <a href="meet_creator.html">Meet the Creator</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="hero">
+        <p class="subtitle">STUDENT SHOWCASE 2026 · ICT 10</p>
+        <h1>NICKNAME ATLAS</h1>
+        <p class="description">An Institution of Questionable Genius</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <h2>Pea Brain Club Membership Registry</h2>
+
+        <p class="instructions">
+            Think you belong among the intellectually questionable?
+            Enter your name below to verify your membership.
+        </p>
+
+        <form onsubmit="return false;">
+
+            <label for="first_name">First Name</label>
+            <input
+                type="text"
+                id="first_name"
+                placeholder="Enter your first name"
+                autocomplete="given-name"
+                required
+            >
+
+            <label for="last_name">Last Name</label>
+            <input
+                type="text"
+                id="last_name"
+                placeholder="Enter your last name"
+                autocomplete="family-name"
+                required
+            >
+
+            <button type="button" py-click="candidate_checker">
+                VERIFY MEMBERSHIP
+            </button>
+
+            <div id="result">
+                Awaiting candidate verification...
+            </div>
+
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        KNOWLEDGE THROUGH DISCOVERY
+        <br>
+        STUDENT SHOWCASE 2026
+    </footer>
+
+    <!-- PYTHON FUNCTIONALITY -->
+    <script type="py" src="./club.py"></script>
+
+</body>
+</html>

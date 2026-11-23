@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Element Archive | Student Showcase</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">STUDENT SHOWCASE</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="element_checker.html" class="active">Element Archive</a>
+            <a href="meet_creator.html">Meet the Creator</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="element-hero">
+        <p class="subtitle">PEA BRAIN CLUB · SCIENTIFIC DIVISION</p>
+        <h1>ELEMENT ARCHIVE</h1>
+        <p class="description">A Reference to the Non-Metal Elements</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Non-Metal Element Checker</h2>
+
+        <p class="instructions">
+            Enter an element symbol to retrieve its scientific information.
+        </p>
+
+        <form onsubmit="return false;">
+
+            <label for="element">Element Symbol</label>
+
+            <input
+                type="text"
+                id="element"
+                placeholder="Example: H, O, C, Ne"
+            >
+
+            <button type="button" py-click="candidate_checker">
+                SEARCH ELEMENT
+            </button>
+
+            <div id="result">
+                Awaiting element identification...
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        KNOWLEDGE THROUGH DISCOVERY
+        <br>
+        STUDENT SHOWCASE 2026
+    </footer>
+
+    <script type="py" src="./elements.py"></script>
+
+</body>
+</html>
